@@ -24,11 +24,16 @@ Objective: Document the occurrence rates of each risk tag across the dataset, pr
 
 <h2> Frequency Analysis in Excel </h2>
 
-<h3> Step 1: Convert all the True and False values to boolean values (1 or 0) </h3>
+<h3> Step 1: Prepare for analysis </h3>
 
-We do this so that can turn words into numbers and therefore make it easier to calculate how many smart contracts is labeled with a particular risk tag.
+1. Convert all the True and False values to boolean values (1 or 0). We do this so that can turn words into numbers and therefore make it easier to calculate how many smart contracts is labeled with a particular risk tag. <br>
+2. To make the data easier to work with you can freeze the top row so you can always see your column headers as you scroll down. This is particularly useful with large datsets. (Go to View > Freeze Panes > Freeze Top Row.)
+3. Create a new worksheet dedicated to the summary table. This helps keep your analysis organized and separate from the raw data.
+4. In column A of the new worksheet, list all the risk tags you are analyzing. Start from A2, leaving A1 for the header "Risk Tag".
 
+<h3> Step 2: Perform Analysis </h3>
 
+1. Calculate the frequency of True values in column B
 
 
 <h1> Part 2: Correlation Analysis </h1>
