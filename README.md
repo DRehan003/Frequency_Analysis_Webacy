@@ -93,7 +93,8 @@ __The libraries__: <br>
 
 <h3> Step 2: Calculating Frequencies </h3>
 
-We'll now use pandas to count how many True values appear in each column which represents our risk tags: <br>
+1. First, we need to create an array called __risk_columns__ that will contain all of our risk tags.
+2. We'll now use pandas to count how many True values appear in each column which represents our risk tags: <br>
 
 &nbsp;&nbsp;&nbsp;&nbsp; __frequencies = data[risk_columns].apply(lambda x: x.value_counts()).loc[True]__ <br>
 &nbsp;&nbsp;&nbsp;&nbsp; __frequencies = frequencies.fillna(0)__ #Replace NaN with 0 for any column that may not have True values <br>
