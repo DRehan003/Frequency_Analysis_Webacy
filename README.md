@@ -26,13 +26,11 @@ Objective: Document the occurrence rates of each risk tag across the dataset, pr
 
 <h3> Step 1: Prepare for analysis </h3>
 
-1. Convert all the True and False values to boolean values (1 or 0). We do this so that can turn words into numbers and therefore make it easier to calculate how many smart contracts is labeled with a particular risk tag. <br>
-
-2. To make the data easier to work with you can freeze the top row so you can always see your column headers as you scroll down. This is particularly useful with large datsets. (Go to View > Freeze Panes > Freeze Top Row.)
+1. To make the data easier to work with you can freeze the top row so you can always see your column headers as you scroll down. This is particularly useful with large datsets. (Go to View > Freeze Panes > Freeze Top Row.)
    
-3. Create a new worksheet dedicated to the summary table. This helps keep your analysis organized and separate from the raw data.
+2. Create a new worksheet dedicated to the summary table. This helps keep your analysis organized and separate from the raw data.
 
-4. In column A of the new worksheet, list all the risk tags you are analyzing. Start from A2, leaving A1 for the header "Risk Tag".
+3. In column A of the new worksheet, list all the risk tags you are analyzing. Start from A2, leaving A1 for the header "Risk Tag".
 
 <h3> Step 2: Calculating the Frequencies and Percentages </h3>
 
@@ -69,6 +67,8 @@ This action copies the formula while adjusting the row references accordingly bu
 
 2. Insert a Bar Chart: Go to Insert > Charts > Bar Chart and choose the first simple bar chart option. Excel will generate a bar chart displaying the frequency of True values for each risk tag.
 
+![image alt](Checkpoint_Images/Bar_Graph_Excel.png)
+
 <h3> Step 4: Findings </h3>
 
 What are the most frequently seen risk tags? <br>
@@ -80,6 +80,10 @@ What are the least frequently seen risk tags? <br>
 1. illegal_unicode
 2. is_airdrop_scam
 3. is_blacklisted
+
+<h2> Frequency Analysis in Python </h2>
+
+
 
 <h1> Part 2: Correlation Analysis </h1>
 
