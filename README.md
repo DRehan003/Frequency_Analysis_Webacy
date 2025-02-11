@@ -27,14 +27,59 @@ Objective: Document the occurrence rates of each risk tag across the dataset, pr
 <h3> Step 1: Prepare for analysis </h3>
 
 1. Convert all the True and False values to boolean values (1 or 0). We do this so that can turn words into numbers and therefore make it easier to calculate how many smart contracts is labeled with a particular risk tag. <br>
+
 2. To make the data easier to work with you can freeze the top row so you can always see your column headers as you scroll down. This is particularly useful with large datsets. (Go to View > Freeze Panes > Freeze Top Row.)
+   
 3. Create a new worksheet dedicated to the summary table. This helps keep your analysis organized and separate from the raw data.
+
 4. In column A of the new worksheet, list all the risk tags you are analyzing. Start from A2, leaving A1 for the header "Risk Tag".
 
-<h3> Step 2: Perform Analysis </h3>
+<h3> Step 2: Calculating the Frequencies and Percentages </h3>
 
-1. Calculate the frequency of True values in column B
+1. Set Up Frequency Calculation
+   
+In column B next to each risk tag, calculate the frequency of True values.
+Label column B as "Frequency of True".
+For example, if the risk tag 'Is_honeypot' is in column B of a worksheet named 'Data', in B2 you would enter:
+=COUNTIF(Data!B:B, TRUE)
 
+3. Calculate Total Number of Entries
+
+Determine the total number of entries in your dataset to use in calculating percentages.
+Place this formula in a cell in the summary worksheet, for example in B1 (consider renaming it to a more descriptive cell name for clarity):
+=COUNTA(Data!B2:B101) // Adjust the range as necessary
+Ensure this range matches the total data entries (excluding headers).
+
+3. Calculate the Percentage of True Values
+
+In column C next to the frequency count, calculate the percentage that each frequency represents relative to the total number of entries.
+Label column C as "Percentage of True".
+In C2, you would enter:
+=B2 / $B$1
+Format the cells in Column C to percentage format for better readability.
+
+4. Drag to Fill the Formulas
+
+After entering the formulas in B2 and C2 for the first risk tag, use the fill handle to drag the formula down through the column to automatically adjust it for the remaining risk tags.
+This action copies the formula while adjusting the row references accordingly but keeps the reference to the total number of entries absolute (using $ signs).
+
+<h3> Step 3: Visualization </h3>
+
+1. Highlight all of your frequency data including the headers.
+
+2. Insert a Bar Chart: Go to Insert > Charts > Bar Chart and choose the first simple bar chart option. Excel will generate a bar chart displaying the frequency of True values for each risk tag.
+
+<h3> Step 4: Findings </h3>
+
+What are the most frequently seen risk tags? <br>
+1. Exploitation (43%)
+2. Bad_contract (34%)
+3. external_dependencies (29%)
+
+What are the least frequently seen risk tags? <br>
+1. illegal_unicode
+2. is_airdrop_scam
+3. is_blacklisted
 
 <h1> Part 2: Correlation Analysis </h1>
 
