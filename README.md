@@ -67,7 +67,7 @@ This action copies the formula while adjusting the row references accordingly bu
 
 2. Insert a Bar Chart: Go to Insert > Charts > Bar Chart and choose the first simple bar chart option. Excel will generate a bar chart displaying the frequency of True values for each risk tag.
 
-![image alt](Checkpoint_Images/Bar_Graph_Python.png)
+![image alt](Checkpoint_Images/Bar_Graph_Excel.png)
 
 <h3> Step 4: Findings </h3>
 
@@ -77,13 +77,13 @@ What are the most frequently seen risk tags? <br>
 3. external_dependencies (29%)
 
 What are the least frequently seen risk tags? <br>
-1. illegal_unicode
-2. is_airdrop_scam
-3. is_blacklisted
+1. illegal_unicode (6%)
+2. is_airdrop_scam (6%)
+3. is_blacklisted (7%)
 
 <h2> Frequency Analysis in Python </h2>
 
-<h2> Step 1: Import the necassary libraries and load the dataset </h2>
+<h3> Step 1: Import the necassary libraries and load the dataset </h3>
 
 __The libraries__: <br>
 <br>
@@ -93,14 +93,16 @@ __The libraries__: <br>
   <br>
   Download the dataset and save it into a pandas dataframe. Print the first five rive using the __.head()__ function.
 
-<h2> Step 2: Calculating Frequencies </h2>
+<h3> Step 2: Calculating Frequencies </h3>
 
 We'll now use pandas to count how many True values appear in each column which represents our risk tags: <br>
 
 &nbsp;&nbsp;&nbsp;&nbsp; __frequencies = data[risk_columns].apply(lambda x: x.value_counts()).loc[True]__ <br>
 &nbsp;&nbsp;&nbsp;&nbsp; __frequencies = frequencies.fillna(0)__ #Replace NaN with 0 for any column that may not have True values <br>
 
-<h2> Step 3: Creating Advanced Visualizations </h2>
+<h3> Step 3: Creating Advanced Visualizations </h3>
+
+Just like in excel, for frequency analysis a simple bar chart is enough. <br>
 
 &nbsp;&nbsp;&nbsp;&nbsp; __sns.set_style("whitegrid")__ # set a style for your chart <br>
 &nbsp;&nbsp;&nbsp;&nbsp; __plt.figure(figsize=(12, 8))__ <br>
@@ -112,4 +114,16 @@ We'll now use pandas to count how many True values appear in each column which r
 &nbsp;&nbsp;&nbsp;&nbsp; __plt.show()__ <br>
 
 ![image alt](Checkpoint_Images/Bar_Graph_Python.png)
+
+<h3> Step 4: Findings </h3>
+
+What are the most frequently seen risk tags? <br>
+1. Exploitation 
+2. Bad_contract
+3. external_dependencies
+
+What are the least frequently seen risk tags? <br>
+1. illegal_unicode
+2. is_airdrop_scam
+3. is_blacklisted
 
