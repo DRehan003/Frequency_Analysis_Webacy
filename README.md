@@ -67,7 +67,7 @@ This action copies the formula while adjusting the row references accordingly bu
 
 2. Insert a Bar Chart: Go to Insert > Charts > Bar Chart and choose the first simple bar chart option. Excel will generate a bar chart displaying the frequency of True values for each risk tag.
 
-![image alt](Checkpoint_Images/Bar_Graph_Excel.png)
+![image alt](Checkpoint_Images/Bar_Graph_Python.png)
 
 <h3> Step 4: Findings </h3>
 
