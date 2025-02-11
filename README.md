@@ -1,4 +1,6 @@
-<h1> Frequency And Correlation Analysis of Smart Contract Vulnerabilities </h1>
+<h1> Frequency of Smart Contract Vulnerabilities </h1>
+
+Objective: Document the occurrence rates of each risk tag across the dataset, providing a clear quantification of the most prevalent vulnerabilities. <br>
 
 Essential Terminology:
 - __Smart Contract__: A self-executing program  stored on blockchain that automatically carries out an agreement when certain conditions are met without needing a middleman. <br>
@@ -17,10 +19,6 @@ Essential Terminology:
     - Hacking of your tokens
     - Suspicious activity such as involvement in shady transactions
     - Fake contracts mimicking legit ones
-
-<h1> Part 1: Frequency Analysis </h1>
-
-Objective: Document the occurrence rates of each risk tag across the dataset, providing a clear quantification of the most prevalent vulnerabilities. <br>
 
 <h2> Frequency Analysis in Excel </h2>
 
