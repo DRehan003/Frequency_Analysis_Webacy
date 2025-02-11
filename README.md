@@ -83,14 +83,33 @@ What are the least frequently seen risk tags? <br>
 
 <h2> Frequency Analysis in Python </h2>
 
+<h2> Step 1: Import the necassary libraries and load the dataset </h2>
 
+__The libraries__: <br>
+<br>
+  &nbsp;&nbsp;&nbsp;&nbsp; - Pandas <br>
+  &nbsp;&nbsp;&nbsp;&nbsp; - Matplotlib <br>
+  &nbsp;&nbsp;&nbsp;&nbsp; - Seaborn <br>
+  <br>
+  Download the dataset and save it into a pandas dataframe. Print the first five rive using the __.head()__ function.
 
-<h1> Part 2: Correlation Analysis </h1>
+<h2> Step 2: Calculating Frequencies </h2>
 
-Objective: Create a visual representation of the correlation matrix to highlight potential relationships between different risk tags. <br>
+We'll now use pandas to count how many True values appear in each column which represents our risk tags: <br>
 
-<h1> Conclusion </h1>
+&nbsp;&nbsp;&nbsp;&nbsp; __frequencies = data[risk_columns].apply(lambda x: x.value_counts()).loc[True]__ <br>
+&nbsp;&nbsp;&nbsp;&nbsp; __frequencies = frequencies.fillna(0)__ #Replace NaN with 0 for any column that may not have True values <br>
 
-How did the frequency and correlation findings provide actionable insights into improving smart contract security? Include potential implications for preventive measures and the prioritization of security efforts. <br>
+<h2> Step 3: Creating Advanced Visualizations </h2>
 
+&nbsp;&nbsp;&nbsp;&nbsp; __sns.set_style("whitegrid")__ # set a style for your chart <br>
+&nbsp;&nbsp;&nbsp;&nbsp; __plt.figure(figsize=(12, 8))__ <br>
+&nbsp;&nbsp;&nbsp;&nbsp; __sns.barplot(x=frequencies.index, y=frequencies.values, palette='viridis')__ <br>
+&nbsp;&nbsp;&nbsp;&nbsp; __plt.title('Frequency of True Values for Each Risk Tag')__ <br>
+&nbsp;&nbsp;&nbsp;&nbsp; __plt.xlabel('Risk Tags')__ <br>
+&nbsp;&nbsp;&nbsp;&nbsp; __plt.ylabel('Frequency of True')__ <br>
+&nbsp;&nbsp;&nbsp;&nbsp; __plt.xticks(rotation=90)__ <br>
+&nbsp;&nbsp;&nbsp;&nbsp; __plt.show()__ <br>
+
+![image alt](Checkpoint_Images/Bar_Graph_Python.png)
 
